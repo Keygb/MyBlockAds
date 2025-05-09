@@ -152,6 +152,14 @@
 # 8.47.0以上版本会有部分图片加载不出来
 ^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/13916\/json\/tripAds url reject-200
 ^https?:\/\/mbd\.baidu\.com\/newspage\/api\/getmobads\?page\=landingshare url reject
+#一汽大众
+https?:\/\/oneapp-api\.faw-vw\.com\/search\/firstPage\/getPromptList\/v1\?.* url script-response-body https://xiangwanguan.github.io/Shadowrocket/Rewrite/JavaScript/FAWVW.js
+https?:\/\/oneapp-api\.faw-vw\.com\/benefits\/benefitsCard\/getInfo\/v1\?.* url script-response-body https://xiangwanguan.github.io/Shadowrocket/Rewrite/JavaScript/FAWVW.js 
+https?:\/\/oneapp-api\.faw-vw\.com\/content\/(recommend\/getRecommendInfoFlows|customize\/getCustomizePageName)\/v1\?.* url script-response-body https://xiangwanguan.github.io/Shadowrocket/Rewrite/JavaScript/FAWVW.js
+https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_HOME_BUOY url script-response-body https://xiangwanguan.github.io/Shadowrocket/Rewrite/JavaScript/FAWVW.js 
+https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_(ICE|MEB)_OPEN_SCREEN_ADS url script-response-body https://xiangwanguan.github.io/Shadowrocket/Rewrite/JavaScript/FAWVW.js 
+https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_(ICE|MEB)_HOME_(OWNER_BANNER|PROSPECTS_BANNER) url script-response-body https://xiangwanguan.github.io/Shadowrocket/Rewrite/JavaScript/FAWVW.js 
+https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_(ICE|MEB)_HOME_(KONGO|CUSTOM_BANNER|CUSTOM_KONGO|CAR_ZHIHU_COLLEGE) url script-response-body https://xiangwanguan.github.io/Shadowrocket/Rewrite/JavaScript/FAWVW.js
 #>招商银行
 # 开屏广告
 ^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig url reject-200
@@ -172,5 +180,5 @@
 
 
 
-hostname=-*m.360buyimg.com,api.m.jd.com,tieba.baidu.com, tiebac.baidu.com,missav.live,missav.ws, missav.ai, missav.com,list-app-m.i4.cn ,acs.m.taobao.com, amdc.m.taobao.com,api.m.jd.com, bdsp-x.jd.com, dsp-x.jd.com, ms.jr.jd.com, appconf.mail.163.com, support.you.163.com ,cds.wifi188.com ,m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com ,client.app.coc.10086.cn, h.client.app.coc.10086.cn, app.10086.cn ,midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com ,webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com ,mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bas.cmbchina.com, intellicc.bcs.cmbchina.com,az*mbasecc.bas.cmbchina.com,-i.vip.iqiyi.com, *.iqiyi.com,acs.m.goofish.com, g-acs.m.goofish.com,wx.17u.cn,web.meituan.com,npay.meituan.com,a1d5b283e-wx621112590b635086.sh.wxgateway.com
+hostname=oneapp-api.faw-vw.com,-*m.360buyimg.com,api.m.jd.com,tieba.baidu.com, tiebac.baidu.com,missav.live,missav.ws, missav.ai, missav.com,list-app-m.i4.cn ,acs.m.taobao.com, amdc.m.taobao.com,api.m.jd.com, bdsp-x.jd.com, dsp-x.jd.com, ms.jr.jd.com, appconf.mail.163.com, support.you.163.com ,cds.wifi188.com ,m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com ,client.app.coc.10086.cn, h.client.app.coc.10086.cn, app.10086.cn ,midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com ,webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com ,mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bas.cmbchina.com, intellicc.bcs.cmbchina.com,az*mbasecc.bas.cmbchina.com,-i.vip.iqiyi.com, *.iqiyi.com,acs.m.goofish.com, g-acs.m.goofish.com,wx.17u.cn,web.meituan.com,npay.meituan.com,a1d5b283e-wx621112590b635086.sh.wxgateway.com
 
