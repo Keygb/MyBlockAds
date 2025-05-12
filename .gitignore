@@ -206,7 +206,17 @@ https:\/\/pan\.baidu\.com\/youai\/material\/v1\/getbynavid\?.*nav_id=1 url rejec
 ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList url reject
 # 多个悬浮窗
 ^https?:\/\/(client\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket url reject
+# > 转转
+^https?:\/\/app\.zhuanzhuan\.com\/zzx\/transfer\/getConfigInfo url reject-dict
+^https?:\/\/app\.zhuanzhuan\.com\/zzopen\/popwindow\/getallpopwin\? url reject-dict
+^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzlogic\/getOpenScreen url reject-dict
+# 转转右下角悬浮广告
+^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/userred\?scene=homePage url reject-dict
+^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getfeedflowinfo\? url response-body userRed response-body SUCCEED
+# “我的”页面去除冗余的模块
+^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3 url script-response-body https://xiangwanguan.github.io/Shadowrocket/Rewrite/JavaScript/zhuanzhuan.js
+^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos url response-body infoData response-body SUCCEED
 
 
-hostname=gateway.kugou.com,fx.service.kugou.com,hwstore.kugou.com,ep.kugou.com,gatewayretry.kugou.com,gzacshow.kugou.com,m1fxgroup.kugou.com,pan.baidu.com, mbd.baidu.com,oneapp-api.faw-vw.com,-*m.360buyimg.com,api.m.jd.com,tieba.baidu.com, tiebac.baidu.com,missav.live,missav.ws, missav.ai, missav.com,list-app-m.i4.cn ,acs.m.taobao.com, amdc.m.taobao.com,api.m.jd.com, bdsp-x.jd.com, dsp-x.jd.com, ms.jr.jd.com, appconf.mail.163.com, support.you.163.com ,cds.wifi188.com ,m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com ,client.app.coc.10086.cn, h.client.app.coc.10086.cn, app.10086.cn ,midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com ,webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com ,mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bas.cmbchina.com, intellicc.bcs.cmbchina.com,az*mbasecc.bas.cmbchina.com,-i.vip.iqiyi.com, *.iqiyi.com,acs.m.goofish.com, g-acs.m.goofish.com,wx.17u.cn,web.meituan.com,npay.meituan.com,a1d5b283e-wx621112590b635086.sh.wxgateway.com
+hostname=app.zhuanzhuan.com,gateway.kugou.com,fx.service.kugou.com,hwstore.kugou.com,ep.kugou.com,gatewayretry.kugou.com,gzacshow.kugou.com,m1fxgroup.kugou.com,pan.baidu.com, mbd.baidu.com,oneapp-api.faw-vw.com,-*m.360buyimg.com,api.m.jd.com,tieba.baidu.com, tiebac.baidu.com,missav.live,missav.ws, missav.ai, missav.com,list-app-m.i4.cn ,acs.m.taobao.com, amdc.m.taobao.com,api.m.jd.com, bdsp-x.jd.com, dsp-x.jd.com, ms.jr.jd.com, appconf.mail.163.com, support.you.163.com ,cds.wifi188.com ,m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com ,client.app.coc.10086.cn, h.client.app.coc.10086.cn, app.10086.cn ,midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com ,webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com ,mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bas.cmbchina.com, intellicc.bcs.cmbchina.com,az*mbasecc.bas.cmbchina.com,-i.vip.iqiyi.com, *.iqiyi.com,acs.m.goofish.com, g-acs.m.goofish.com,wx.17u.cn,web.meituan.com,npay.meituan.com,a1d5b283e-wx621112590b635086.sh.wxgateway.com
 
