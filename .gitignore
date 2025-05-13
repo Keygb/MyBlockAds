@@ -56,7 +56,7 @@
 ^https:\/\/api\.m\.jd\.com\/\?loginType=11 url reject-dict
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 url reject
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 url reject
-#https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:searchBoxWord|stationPullService|uniformRecommend[06]) url reject-dict
+####https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:searchBoxWord|stationPullService|uniformRecommend[06]) url reject-dict
 https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/jingdong.js
 https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising url script-response-body https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js
 https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) url script-response-body https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js
