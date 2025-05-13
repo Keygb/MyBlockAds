@@ -51,7 +51,7 @@
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]) url reject-dict
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=start url  reject-dict
 ^https:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/\d{5,6}\/\d{2}\/\d{5}\/\d{6}\/\w{17}\/\w{16}\.(jpg|png) url reject
-^https:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/[^\s]+\.(jpg|png) reject
+^https:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/[^\s]+\.(jpg|png) url reject
 ^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs  url reject-200
 #首页右下角
 ^https:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/97554\/21\/54779\/77048\/004e2c01F58e98eb3\/9130c908eb41c8b5\.gif url reject
