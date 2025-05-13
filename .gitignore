@@ -48,12 +48,14 @@
 #Missav  
 ^https?:\/\/missav\.(ws|com|ai)\/(?!(.*(api|login|cdn-cgi|verify|auth|captch|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mov|m4v|avi|mkv|flv|rmvb|wmv|rm|asf|asx|mp3|json|ico|otf|ttf))))).* url script-response-body https://limbopro.com/Adguard/Adblock4limbo.js
 #京东
-"^http:\/\/\w{32}\.jddebug\.com\/diagnose\?" url reject-200
-https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs url reject-200
-http:\/\/\w{32}\.jddebug\.com\/diagnose\? url reject
-https:\/\/api\.m\.jd\.com\/\?loginType=11 url reject-dict
-https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 url reject
-https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 url reject
+^https:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/97554\/21\/54779\/77048\/004e2c01F58e98eb3\/9130c908eb41c8b5\.gif reject
+^https:\/\/m15\.360buyimg\.com\/mobilecms\/s1065x120_jfs\/[^\s]+\.(jpg|png) reject
+^http:\/\/\w{32}\.jddebug\.com\/diagnose\?" url reject-200
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs url reject-200
+^http:\/\/\w{32}\.jddebug\.com\/diagnose\? url reject
+^https:\/\/api\.m\.jd\.com\/\?loginType=11 url reject-dict
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 url reject
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 url reject
 https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:searchBoxWord|stationPullService|uniformRecommend[06]) url reject-dict
 https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) url script-response-body  https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/jingdong.js
 https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising url script-response-body https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js
@@ -61,22 +63,22 @@ https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(wareBusiness|serverConfi
 https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html url script-request-header https://raw.githubusercontent.com/mw418/Loon/main/script/jd_price.js
 https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html url script-response-body https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Jingdong/JD_Price.js
 #酷狗音乐
-"^http:\/\/log\.stat\.kugou\.com\/mobile\/ad\.html" url reject-200
-https:\/\/fx\.service\.kugou\.com\/mfx-kugoulive\/ad\/ url reject-dict
-https:\/\/gateway(retry)?\.kugou\.com\/adp\/ad\/ url reject-dict
-https:\/\/gateway(retry)?\.kugou\.com\/ads\.gateway\/ url reject-dict
-https:\/\/gateway(retry)?\.kugou\.com\/v\d\/feeds\/follow_feed_fallback url reject-dict
-https:\/\/gateway(retry)?\.kugou\.com\/mstc\/musicsymbol\/v\d\/system\/profile url reject-dict
-https:\/\/gateway(retry)?\.kugou\.com\/searchnofocus\/v\d\/search_no_focus_word url reject-dict
-https:\/\/gateway(retry)?\.kugou\.com\/adp\/bubble\/v\d\/song_play url reject-dict
-https:\/\/gateway(retry)?\.kugou\.com\/singerdiscuss\/v\d\/entrance\/comment url reject-dict
-https:\/\/gateway(retry)?\.kugou\.com\/r\/v\d\/general\/putin\/midad url reject-dict
-https:\/\/gateway(retry)?\.kugou\.com\/ocean\/v\d\/sound\/banner url reject-dict
-https:\/\/gzacshow\.kugou\.com\/mfanxing-home\/cdn\/room\/index\/list_v2 url reject-dict
-https:\/\/gzacshow\.kugou\.com\/mfx-rt-show\/cdn\/mo\/show\/headline url reject-dict
-https:\/\/m1fxgroup\.kugou\.com\/fxsing\/yqc\/alongInfo\/getUserAlongInfo url reject-dict
-https:\/\/hwstore\.kugou\.com\/v\d\/get_store_data url reject-dict
-https:\/\/ep\.kugou\.com\/v\d\/album_shop\/get_entrance_info url reject-dict
+^http:\/\/log\.stat\.kugou\.com\/mobile\/ad\.html" url reject-200
+^https:\/\/fx\.service\.kugou\.com\/mfx-kugoulive\/ad\/ url reject-dict
+^https:\/\/gateway(retry)?\.kugou\.com\/adp\/ad\/ url reject-dict
+^https:\/\/gateway(retry)?\.kugou\.com\/ads\.gateway\/ url reject-dict
+^https:\/\/gateway(retry)?\.kugou\.com\/v\d\/feeds\/follow_feed_fallback url reject-dict
+^https:\/\/gateway(retry)?\.kugou\.com\/mstc\/musicsymbol\/v\d\/system\/profile url reject-dict
+^https:\/\/gateway(retry)?\.kugou\.com\/searchnofocus\/v\d\/search_no_focus_word url reject-dict
+^https:\/\/gateway(retry)?\.kugou\.com\/adp\/bubble\/v\d\/song_play url reject-dict
+^https:\/\/gateway(retry)?\.kugou\.com\/singerdiscuss\/v\d\/entrance\/comment url reject-dict
+^https:\/\/gateway(retry)?\.kugou\.com\/r\/v\d\/general\/putin\/midad url reject-dict
+^https:\/\/gateway(retry)?\.kugou\.com\/ocean\/v\d\/sound\/banner url reject-dict
+^https:\/\/gzacshow\.kugou\.com\/mfanxing-home\/cdn\/room\/index\/list_v2 url reject-dict
+^https:\/\/gzacshow\.kugou\.com\/mfx-rt-show\/cdn\/mo\/show\/headline url reject-dict
+^https:\/\/m1fxgroup\.kugou\.com\/fxsing\/yqc\/alongInfo\/getUserAlongInfo url reject-dict
+^https:\/\/hwstore\.kugou\.com\/v\d\/get_store_data url reject-dict
+^https:\/\/ep\.kugou\.com\/v\d\/album_shop\/get_entrance_info url reject-dict
 #>农业银行
 ^https?:\/\/midc\.cdn-static\.abchina\.com\.cn\/distributecenterimg\/file\/download\/(?!bbc2|f015|1655|0992|4678|a194|d8e2|c513|e51c|0ee1|166e|05ca|c882|d5b8|22ed|a0dc|a55a|6f89|3bf9|3c71|52ec|5b62|ve7a|001c|923d|accf|4a10|0bd7|be7a|5b62|5dd6|1f24|006c|775d|bd02|b983|5251|806b|d119|db14|43c9|41d3|8570|2c10|85ea|1435|814e|f422|aec7|738c|d7c8|0538|02b4|fd20|7647|f6ef|07c5|885b|e4cb|685b|30aa|c23b|9603|f27f|eaf8|8011|a5eb|409d|724c|3f2a|e07f|6744|60a6|158c|8ce3) url reject-dict
 ^https?:\/\/enjoy\.cdn-static\.abchina\.com\/yx-engine-web\/file\/download\/(?!7dc2|fe96|cea3|06a8|1b11|d57b|6918|61db|2d58|aa23|) url reject-200
@@ -227,5 +229,5 @@ https:\/\/pan\.baidu\.com\/youai\/material\/v1\/getbynavid\?.*nav_id=1 url rejec
 ^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos url response-body infoData response-body SUCCEED
 
 
-hostname=api.m.jd.com,in.m.jd.com,apapia-sqk-weblogic.manmanbuy.com,m.360buyimg.com,app.zhuanzhuan.com,gateway.kugou.com,fx.service.kugou.com,hwstore.kugou.com,ep.kugou.com,gatewayretry.kugou.com,gzacshow.kugou.com,m1fxgroup.kugou.com,pan.baidu.com,mbd.baidu.com,oneapp-api.faw-vw.com,tieba.baidu.com,tiebac.baidu.com,missav.live,missav.ws,missav.ai,missav.com,list-app-m.i4.cn,acs.m.taobao.com,amdc.m.taobao.com,bdsp-x.jd.com,dsp-x.jd.com,ms.jr.jd.com,appconf.mail.163.com,support.you.163.com,cds.wifi188.com,m.ctrip.com,ma-adx.ctrip.com,client.app.coc.10086.cn,h.client.app.coc.10086.cn,app.10086.cn,midc.cdn-static.abchina.com.cn,enjoy.cdn-static.abchina.com,webappcfg.paas.cmbchina.com,mbmodule-openapi.paas.cmbchina.com,mbasecc.bas.cmbchina.com,mbasecc.bcs.cmbchina.com,intellicc.bas.cmbchina.com,intellicc.bcs.cmbchina.com,az*mbasecc.bas.cmbchina.com,-i.vip.iqiyi.com,*.iqiyi.com,acs.m.goofish.com,g-acs.m.goofish.com,wx.17u.cn,web.meituan.com,npay.meituan.com,a1d5b283e-wx621112590b635086.sh.wxgateway.com
+hostname=api.m.jd.com,m15.360buyimg.com,in.m.jd.com,apapia-sqk-weblogic.manmanbuy.com,m.360buyimg.com,app.zhuanzhuan.com,gateway.kugou.com,fx.service.kugou.com,hwstore.kugou.com,ep.kugou.com,gatewayretry.kugou.com,gzacshow.kugou.com,m1fxgroup.kugou.com,pan.baidu.com,mbd.baidu.com,oneapp-api.faw-vw.com,tieba.baidu.com,tiebac.baidu.com,missav.live,missav.ws,missav.ai,missav.com,list-app-m.i4.cn,acs.m.taobao.com,amdc.m.taobao.com,bdsp-x.jd.com,dsp-x.jd.com,ms.jr.jd.com,appconf.mail.163.com,support.you.163.com,cds.wifi188.com,m.ctrip.com,ma-adx.ctrip.com,client.app.coc.10086.cn,h.client.app.coc.10086.cn,app.10086.cn,midc.cdn-static.abchina.com.cn,enjoy.cdn-static.abchina.com,webappcfg.paas.cmbchina.com,mbmodule-openapi.paas.cmbchina.com,mbasecc.bas.cmbchina.com,mbasecc.bcs.cmbchina.com,intellicc.bas.cmbchina.com,intellicc.bcs.cmbchina.com,az*mbasecc.bas.cmbchina.com,-i.vip.iqiyi.com,*.iqiyi.com,acs.m.goofish.com,g-acs.m.goofish.com,wx.17u.cn,web.meituan.com,npay.meituan.com,a1d5b283e-wx621112590b635086.sh.wxgateway.com
 
