@@ -57,7 +57,6 @@
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 url reject
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 url reject
 https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:searchBoxWord|stationPullService|uniformRecommend[06]) url reject-dict
-
 #酷狗音乐
 ^http:\/\/log\.stat\.kugou\.com\/mobile\/ad\.html" url reject-200
 ^https:\/\/fx\.service\.kugou\.com\/mfx-kugoulive\/ad\/ url reject-dict
