@@ -71,6 +71,8 @@
 ^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\? url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Gaodeditu.js
 ^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(car\/order\/content_info|order_web\/friendly_information) url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Gaodeditu.js
 ^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource(\/home)?\? url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Gaodeditu.js
+#此条隐藏搜索地区用户评价信息,需要开启删除下方#字符号或粘贴到本地重写
+#^https:\/\/m5\.amap\.com\/ws\/shield\/search\/(common\/coupon\/info|poi\/detail) url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Gaodeditu.js
 #Missav  
 ^https?:\/\/missav\.(ws|com|ai)\/(?!(.*(api|login|cdn-cgi|verify|auth|captch|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mov|m4v|avi|mkv|flv|rmvb|wmv|rm|asf|asx|mp3|json|ico|otf|ttf))))).* url script-response-body https://limbopro.com/Adguard/Adblock4limbo.js
 #京东
