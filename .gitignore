@@ -45,6 +45,33 @@
 # > 大麦
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.welcome url reject-200
 ^https?:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch\?appkey=23782110 url reject
+#高德地图
+^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? url  reject-dict
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-(car-end|route-plan) url reject-dict
+^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/tips_adv\? url reject-dict
+^https:\/\/oss\.amap\.com\/ws\/banner\/lists\/\? url reject-dict
+^https:\/\/m5\.amap\.com\/ws\/aos\/main\/page\/product\/list\? url reject-dict
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(main-page-assets|main-page-location|ridewalk-end-fc) url reject-dict
+^https:\/\/m5\.amap\.com\/ws\/(mapapi\/hint_text\/offline_data|message\/notice\/list|shield\/search\/new_hotword) url reject-dict
+^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? url reject-dict
+^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\? url reject-dict
+^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? url reject-dict
+^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(order\/car\/(feedback\/get_card_questions|feedback\/viptips|king_toolbox_car_bubble|remark\/satisfactionConf|rights_information)|tips\/onscene_visual_optimization) url reject-dict
+^https:\/\/m5-zb\.amap\.com\/ws\/boss\/pay\/web\/paySuccess\/info\/request url reject-dict
+^https:\/\/m5\.amap\.com\/ws\/aos\/perception\/publicTravel\/beforeNavi\? url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Gaodeditu.js
+^https:\/\/m5\.amap\.com\/ws\/bus\/plan\/integrate\? url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Gaodeditu.js
+^https:\/\/m5\.amap\.com\/ws\/c3frontend\/(af-(hotel|launch)\/page\/main|af-nearby\/nearby) url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Gaodeditu.js
+^https:\/\/m5\.amap\.com\/ws\/perception\/drive\/(routeInfo|routePlan) url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Gaodeditu.js
+^https:\/\/m5\.amap\.com\/ws\/shield\/search\/(common\/coupon\/info|poi\/detail) url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Gaodeditu.js
+^https:\/\/m5\.amap\.com\/ws\/shield\/search_bff\/hotword\? url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Gaodeditu.js
+^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(mps|search\/sp|sug|tips_operation_location) url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Gaodeditu.js
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(card-service-plan-home|main-page) url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Gaodeditu.js
+^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable\/1\? url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Gaodeditu.js
+^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\? url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Gaodeditu.js
+^https:\/\/m5\.amap\.com\/ws\/shield\/search\/nearbyrec_smart\? url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Gaodeditu.js
+^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\? url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Gaodeditu.js
+^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(car\/order\/content_info|order_web\/friendly_information) url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Gaodeditu.js
+^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource(\/home)?\? url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Gaodeditu.js
 #Missav  
 ^https?:\/\/missav\.(ws|com|ai)\/(?!(.*(api|login|cdn-cgi|verify|auth|captch|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mov|m4v|avi|mkv|flv|rmvb|wmv|rm|asf|asx|mp3|json|ico|otf|ttf))))).* url script-response-body https://limbopro.com/Adguard/Adblock4limbo.js
 #京东
@@ -241,5 +268,5 @@ https:\/\/pan\.baidu\.com\/youai\/material\/v1\/getbynavid\?.*nav_id=1 url rejec
 ^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3 url script-response-body https://xiangwanguan.github.io/Shadowrocket/Rewrite/JavaScript/zhuanzhuan.js
 ^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos url response-body infoData response-body SUCCEED
 
-hostname=api-shoulei-ssl.xunlei.com, conf-m-ssl.xunlei.com,app.zhuanzhuan.com,gateway.kugou.com,fx.service.kugou.com,hwstore.kugou.com,ep.kugou.com,gatewayretry.kugou.com,gzacshow.kugou.com,m1fxgroup.kugou.com,pan.baidu.com,mbd.baidu.com,oneapp-api.faw-vw.com,tieba.baidu.com,tiebac.baidu.com,missav.live,missav.ws,missav.ai,missav.com,list-app-m.i4.cn,acs.m.taobao.com,amdc.m.taobao.com,bdsp-x.jd.com,dsp-x.jd.com,ms.jr.jd.com,appconf.mail.163.com,support.you.163.com,cds.wifi188.com,m.ctrip.com,ma-adx.ctrip.com,client.app.coc.10086.cn,h.client.app.coc.10086.cn,app.10086.cn,midc.cdn-static.abchina.com.cn,enjoy.cdn-static.abchina.com,webappcfg.paas.cmbchina.com,mbmodule-openapi.paas.cmbchina.com,mbasecc.bas.cmbchina.com,mbasecc.bcs.cmbchina.com,intellicc.bas.cmbchina.com,intellicc.bcs.cmbchina.com,az*mbasecc.bas.cmbchina.com,-i.vip.iqiyi.com,*.iqiyi.com,acs.m.goofish.com,g-acs.m.goofish.com,wx.17u.cn,web.meituan.com,npay.meituan.com,a1d5b283e-wx621112590b635086.sh.wxgateway.com,acs.m.taobao.com,heic.alicdn.com,guide-acs.m.taobao.com,poplayer.template.alibaba.com
+hostname=,api-shoulei-ssl.xunlei.com, conf-m-ssl.xunlei.com,app.zhuanzhuan.com,gateway.kugou.com,fx.service.kugou.com,hwstore.kugou.com,ep.kugou.com,gatewayretry.kugou.com,gzacshow.kugou.com,m1fxgroup.kugou.com,pan.baidu.com,mbd.baidu.com,oneapp-api.faw-vw.com,tieba.baidu.com,tiebac.baidu.com,missav.live,missav.ws,missav.ai,missav.com,list-app-m.i4.cn,acs.m.taobao.com,amdc.m.taobao.com,bdsp-x.jd.com,dsp-x.jd.com,ms.jr.jd.com,appconf.mail.163.com,support.you.163.com,cds.wifi188.com,m.ctrip.com,ma-adx.ctrip.com,client.app.coc.10086.cn,h.client.app.coc.10086.cn,app.10086.cn,midc.cdn-static.abchina.com.cn,enjoy.cdn-static.abchina.com,webappcfg.paas.cmbchina.com,mbmodule-openapi.paas.cmbchina.com,mbasecc.bas.cmbchina.com,mbasecc.bcs.cmbchina.com,intellicc.bas.cmbchina.com,intellicc.bcs.cmbchina.com,az*mbasecc.bas.cmbchina.com,-i.vip.iqiyi.com,*.iqiyi.com,acs.m.goofish.com,g-acs.m.goofish.com,wx.17u.cn,web.meituan.com,npay.meituan.com,a1d5b283e-wx621112590b635086.sh.wxgateway.com,acs.m.taobao.com,heic.alicdn.com,guide-acs.m.taobao.com,poplayer.template.alibaba.com,m5.amap.com,m5-zb.amap.com,oss.amap.com,sns.amap.com
 
