@@ -122,8 +122,6 @@
 #迅雷
 ^https:\/\/api-shoulei-ssl\.xunlei\.com\/flowhub\/v1\/slots:batchGet$ url reject-dict
 ^https:\/\/conf-m-ssl\.xunlei\.com\/external\/  url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xunlei.js
-#会员解锁
-https://xluser-ssl.xunlei.com/xluser.core.login/v3/getuserinfo url script-response-body https://raw.githubusercontent.com/Marol62926/MarScrpt/main/xunlei.js
 #闲鱼
 #!author = 可莉、kelv1n1n、奶思、怎么肥事
 # 拦截广告下发
@@ -229,5 +227,5 @@ https:\/\/pan\.baidu\.com\/youai\/material\/v1\/getbynavid\?.*nav_id=1 url rejec
 ^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3 url script-response-body https://xiangwanguan.github.io/Shadowrocket/Rewrite/JavaScript/zhuanzhuan.js
 ^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos url response-body infoData response-body SUCCEED
 
-hostname=xluser-ssl.xunlei.com,api-shoulei-ssl.xunlei.com, conf-m-ssl.xunlei.com,app.zhuanzhuan.com,gateway.kugou.com,fx.service.kugou.com,hwstore.kugou.com,ep.kugou.com,gatewayretry.kugou.com,gzacshow.kugou.com,m1fxgroup.kugou.com,pan.baidu.com,mbd.baidu.com,oneapp-api.faw-vw.com,tieba.baidu.com,tiebac.baidu.com,missav.live,missav.ws,missav.ai,missav.com,list-app-m.i4.cn,acs.m.taobao.com,amdc.m.taobao.com,bdsp-x.jd.com,dsp-x.jd.com,ms.jr.jd.com,appconf.mail.163.com,support.you.163.com,cds.wifi188.com,m.ctrip.com,ma-adx.ctrip.com,client.app.coc.10086.cn,h.client.app.coc.10086.cn,app.10086.cn,midc.cdn-static.abchina.com.cn,enjoy.cdn-static.abchina.com,webappcfg.paas.cmbchina.com,mbmodule-openapi.paas.cmbchina.com,mbasecc.bas.cmbchina.com,mbasecc.bcs.cmbchina.com,intellicc.bas.cmbchina.com,intellicc.bcs.cmbchina.com,az*mbasecc.bas.cmbchina.com,-i.vip.iqiyi.com,*.iqiyi.com,acs.m.goofish.com,g-acs.m.goofish.com,wx.17u.cn,web.meituan.com,npay.meituan.com,a1d5b283e-wx621112590b635086.sh.wxgateway.com
+hostname=api-shoulei-ssl.xunlei.com, conf-m-ssl.xunlei.com,app.zhuanzhuan.com,gateway.kugou.com,fx.service.kugou.com,hwstore.kugou.com,ep.kugou.com,gatewayretry.kugou.com,gzacshow.kugou.com,m1fxgroup.kugou.com,pan.baidu.com,mbd.baidu.com,oneapp-api.faw-vw.com,tieba.baidu.com,tiebac.baidu.com,missav.live,missav.ws,missav.ai,missav.com,list-app-m.i4.cn,acs.m.taobao.com,amdc.m.taobao.com,bdsp-x.jd.com,dsp-x.jd.com,ms.jr.jd.com,appconf.mail.163.com,support.you.163.com,cds.wifi188.com,m.ctrip.com,ma-adx.ctrip.com,client.app.coc.10086.cn,h.client.app.coc.10086.cn,app.10086.cn,midc.cdn-static.abchina.com.cn,enjoy.cdn-static.abchina.com,webappcfg.paas.cmbchina.com,mbmodule-openapi.paas.cmbchina.com,mbasecc.bas.cmbchina.com,mbasecc.bcs.cmbchina.com,intellicc.bas.cmbchina.com,intellicc.bcs.cmbchina.com,az*mbasecc.bas.cmbchina.com,-i.vip.iqiyi.com,*.iqiyi.com,acs.m.goofish.com,g-acs.m.goofish.com,wx.17u.cn,web.meituan.com,npay.meituan.com,a1d5b283e-wx621112590b635086.sh.wxgateway.com
 
