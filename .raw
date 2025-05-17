@@ -1,36 +1,36 @@
 #爱思助手
 ^https?:\/\/list-app-m\.i4\.cn\/(adclickcb|getHotSearchList|getopfstadinfo)\.xhtml url reject
 #爱奇艺
-# 播放页开通会员提示
+#播放页开通会员提示
 ^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show\? url reject-dict
-# 首页信息流广告
+#首页信息流广告
 ^https?:\/\/[\d\.]+\/3f1\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
 ^https?:\/\/access\.if\.iqiyi\.com\/3f1\/cards\.iqiyi\.com\/(views_category\/3\.0\/category_home|views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
 ^https?:\/\/cards\.iqiyi\.com\/views_category\/3\.0\/(category_home|categorylib_content|film_hybrid)\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
 ^https?:\/\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
-# 播放详情页
+#播放详情页
 ^https?:\/\/cards\.iqiyi\.com\/views_plt\/3\.0\/player_tabs_v2\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
-# 搜索页列表
+#搜索页列表
 ^https?:\/\/cards\.iqiyi\.com\/views_search\/3\.0\/(hot_query_)?search\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
-# 评论区
+#评论区
 ^https?:\/\/comment-card\.iqiyi\.com\/views_comment\/3\.0\/long_video_comments\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
-# 我的页面菜单
+#我的页面菜单
 ^https?:\/\/iface2\.iqiyi\.com\/aggregate\/3\.0\/getMyMenus\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
-# 首页左上角天气
+#首页左上角天气
 ^https?:\/\/iface2\.iqiyi\.com\/control\/3\.0\/init_proxy\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
-# 通用控制,各tab页二楼
+#通用控制,各tab页二楼
 ^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/common_switch\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
-# 播放页多余动效
+#播放页多余动效
 ^https?:\/\/iface2\.iqiyi\.com\/ivos\/interact\/video\/data\? url reject-dict
-# 播放页升级白金会员按钮
+#播放页升级白金会员按钮
 ^https?:\/\/iface2\.iqiyi\.com\/video\/3\.0\/v_interface_proxy\? url reject-dict
-# 底部tab,顶部tab
+#底部tab,顶部tab
 ^https?:\/\/iface2\.iqiyi\.com\/views\/3\.0\/(bottom_theme|home_top_menu)\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
-# 青少年弹窗
+#青少年弹窗
 ^https?:\/\/iface2\.iqiyi\.com\/views_pop\/3\.0\/pop_control\? url reject-dict
-# 搜索框填充词
+#搜索框填充词
 ^https?:\/\/search\.video\.iqiyi\.com\/q\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
-# 开屏广告,播放广告
+#开屏广告,播放广告
 ^https?:\/\/(kjp|t7z)\.cupid\.iqiyi\.com\/mixer\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
 #百度贴吧净化
 ^https:\/\/tiebac\.baidu\.com\/c\/u\/chat\/getChatSubscriptionList url reject-dict
@@ -126,7 +126,7 @@
 # 首页弹窗广告
 ^https?:\/\/cds\.wifi188\.com\/feeds\.sec url reject-dict
 #微信
-# 移除微信公众号文章底栏都在搜
+#移除微信公众号文章底栏都在搜
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/relatedsearchword url reject-dict
 #微信小程序净化
 #同程旅行
@@ -165,60 +165,60 @@
 ^https:\/\/api-shoulei-ssl\.xunlei\.com\/flowhub\/v1\/slots:batchGet$ url reject-dict
 ^https:\/\/conf-m-ssl\.xunlei\.com\/external\/  url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xunlei.js
 #闲鱼
-# 拦截广告下发
+#拦截广告下发
 ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch %E9%97%B2%E9%B1%BC* url-and-header reject
-# 首页顶部标签
+#首页顶部标签
 ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.home\.whale\.modulet\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-# 搜索栏填充词
+#搜索栏填充词
 ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.shade\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-# 首页闲鱼币入口、底部发布球
+#首页闲鱼币入口、底部发布球
 ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.list\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-# 商品信息流广告
+#商品信息流广告
 ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-# 定位地区页面的信息流广告
+#定位地区页面的信息流广告
 ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.home\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-# 个人主页
+#个人主页
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-# 消息页感兴趣推荐
+#消息页感兴趣推荐
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.playboy\.recommend\/1\.0 url reject
-# 主页关注的人感兴趣推荐
+#主页关注的人感兴趣推荐
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.playboy\.recommend\/2\.0 url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-# 首页顶部频道菜单
+#首页顶部频道菜单
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/1\.0 url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
 #^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/1\.0 url reject
-# 商品详情页底部推荐
+#商品详情页底部推荐
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.recommend\.list\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-# 商品详情页周边推荐
+#商品详情页周边推荐
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.nearby\.itemdetail\.enter\/1\.0 url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-# 0关注情况下首页顶部关注频道的用户推荐
+#0关注情况下首页顶部关注频道的用户推荐
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.fun\.follow\.feed\.list\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
 #^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.fun\.follow\.recommend\.feed\.list\/1\.0 url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-# 搜索结果信息流广告
+#搜索结果信息流广告
 ^https:\/\/g-acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-# 关注的人页面圈子横幅
+#关注的人页面圈子横幅
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.group\.myself\.banner\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-# 首页关注频道常访问的圈子
+#首页关注频道常访问的圈子
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.fun\.follow\.often\.visit url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-# 主页关注页面圈子新横幅
+#主页关注页面圈子新横幅
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.circle\.myself\.banner\/1\.0 url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-# 主页关注页面圈子常访问
+#主页关注页面圈子常访问
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.circle\.visited\/1\.0 url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-# 闲鱼我的页面底部商品推荐
+#闲鱼我的页面底部商品推荐
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.buy\.feeds url reject-dict
-# 开屏广告
+#开屏广告
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlecommerce\.splash\.ads url reject-dict
-# 搜索页多余推荐列表
+#搜索页多余推荐列表
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.item\.search\.activate\/2\.0 url reject-dict
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.discover\/1\.0 url reject-dict
-# 这些宝贝超好卖
+#这些宝贝超好卖
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.resell\.recommendorhotcate\/1\.0 url reject-dict
-# 用闲鱼币买更便宜
+#用闲鱼币买更便宜
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.idle\.coin\.nextfresh\/1\.0 url reject-dict
-# 消息页闲鱼精选
+#消息页闲鱼精选
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemessage\.session\.sync\/3\.0 url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
 #携程
 ^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/[0-9]{5}\/json\/getTimeZoneServerIpList\?__gw_os=IOS url reject-200
-# 开屏去广告
+#开屏去广告
 ^https?:\/\/ma-adx\.ctrip\.com\/_ma\.gif url reject
 ^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/13916\/json\/tripAds url reject-200
 ^https?:\/\/mbd\.baidu\.com\/newspage\/api\/getmobads\?page\=landingshare url reject
@@ -235,16 +235,16 @@ https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPosi
 https:\/\/pan\.baidu\.com\/act\/api\/conf\?.*conf_key=youa_core_config_ios url reject-dict
 https:\/\/pan\.baidu\.com\/youai\/material\/v1\/getbynavid\?.*nav_id=1 url reject-dict
 #招商银行
-# 开屏广告
+#开屏广告
 ^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig url reject-200
-# 首页横幅广告
+#首页横幅广告
 ^https?:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic url reject-dict
-# 掌上生活
-# 开屏广告
+#掌上生活
+#开屏广告
 ^https?:\/\/mbasecc\.(bas|bcs)\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec url reject-dict
-# 设置栏目内广告
+#设置栏目内广告
 ^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec url reject
-# 首页随机弹窗
+#首页随机弹窗
 ^https?:\/\/intellicc\.bcs\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.adrender\.api\.AdWork\/getAdsBySlotId url reject-dict
 ^https?:\/\/mars\.ccc\.cmbchina\.com\/MarsReceiver url reject-dict
 ^https?:\/\/marscc\.bcs\.cmbchina\.com\/MarsReceiver url reject-dict
@@ -254,79 +254,23 @@ https:\/\/pan\.baidu\.com\/youai\/material\/v1\/getbynavid\?.*nav_id=1 url rejec
 ^https?:\/\/.*mbasecc\.\w+\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.preloadService\/preload url reject
 ^https?:\/\/.*mbasecc\.\w+\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec url reject
 ^https?:\/\/res\.cc\.cmbimg\.com\/fsp\/File\/ClientFacePublic\/\w+\.DAT$ url response-body widget response-body widget0
-# 中国移动
+#中国移动
 ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit url reject
 ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList url reject
-# 多个悬浮窗
+#多个悬浮窗
 ^https?:\/\/(client\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket url reject
 #转转
 ^https?:\/\/app\.zhuanzhuan\.com\/zzx\/transfer\/getConfigInfo url reject-dict
 ^https?:\/\/app\.zhuanzhuan\.com\/zzopen\/popwindow\/getallpopwin\? url reject-dict
 ^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzlogic\/getOpenScreen url reject-dict
-# 转转右下角悬浮广告
+#转转右下角悬浮广告
 ^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/userred\?scene=homePage url reject-dict
 ^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getfeedflowinfo\? url response-body userRed response-body SUCCEED
-# “我的”页面去除冗余的模块
+#“我的”页面去除冗余的模块
 ^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3 url script-response-body https://xiangwanguan.github.io/Shadowrocket/Rewrite/JavaScript/zhuanzhuan.js
 ^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos url response-body infoData response-body SUCCEED
 
 
 
-hostname= api-shoulei-ssl.xunlei.com
-conf-m-ssl.xunlei.com
-app.zhuanzhuan.com
-gateway.kugou.com
-fx.service.kugou.com
-hwstore.kugou.com
-ep.kugou.com
-gatewayretry.kugou.com
-gzacshow.kugou.com
-m1fxgroup.kugou.com
-pan.baidu.com
-mbd.baidu.com
-oneapp-api.faw-vw.com
-tieba.baidu.com
-tiebac.baidu.com
-missav.live
-missav.ws
-missav.ai
-missav.com
-list-app-m.i4.cn
-acs.m.taobao.com
-amdc.m.taobao.com
-bdsp-x.jd.com
-dsp-x.jd.com
-ms.jr.jd.com
-appconf.mail.163.com
-support.you.163.com
-cds.wifi188.com
-m.ctrip.com
-ma-adx.ctrip.com
-client.app.coc.10086.cn
-h.client.app.coc.10086.cn
-app.10086.cn
-midc.cdn-static.abchina.com.cn
-enjoy.cdn-static.abchina.com
-webappcfg.paas.cmbchina.com
-mbmodule-openapi.paas.cmbchina.com
-mbasecc.bas.cmbchina.com
-mbasecc.bcs.cmbchina.com
-intellicc.bas.cmbchina.com
-intellicc.bcs.cmbchina.com
-az*mbasecc.bas.cmbchina.com
--i.vip.iqiyi.com
-*.iqiyi.com
-acs.m.goofish.com
-g-acs.m.goofish.com
-wx.17u.cn
-web.meituan.com
-npay.meituan.com
-a1d5b283e-wx621112590b635086.sh.wxgateway.com
-heic.alicdn.com
-guide-acs.m.taobao.com
-poplayer.template.alibaba.com
-m5.amap.com
-m5-zb.amap.com
-oss.amap.com
-sns.amap.com
+hostname=api-shoulei-ssl.xunlei.com,conf-m-ssl.xunlei.com,app.zhuanzhuan.com,gateway.kugou.com,fx.service.kugou.com,hwstore.kugou.com,ep.kugou.com,gatewayretry.kugou.com,gzacshow.kugou.com,m1fxgroup.kugou.com,pan.baidu.com,mbd.baidu.com,oneapp-api.faw-vw.com,tieba.baidu.com,tiebac.baidu.com,missav.live,missav.ws,missav.ai,missav.com,list-app-m.i4.cn,acs.m.taobao.com,amdc.m.taobao.com,bdsp-x.jd.com,dsp-x.jd.com,ms.jr.jd.com,appconf.mail.163.com,support.you.163.com,cds.wifi188.com,m.ctrip.com,ma-adx.ctrip.com,client.app.coc.10086.cn,h.client.app.coc.10086.cn,app.10086.cn,midc.cdn-static.abchina.com.cn,enjoy.cdn-static.abchina.com,webappcfg.paas.cmbchina.com,mbmodule-openapi.paas.cmbchina.com,mbasecc.bas.cmbchina.com,mbasecc.bcs.cmbchina.com,intellicc.bas.cmbchina.com,intellicc.bcs.cmbchina.com,az*mbasecc.bas.cmbchina.com,-i.vip.iqiyi.com,*.iqiyi.com,acs.m.goofish.com,g-acs.m.goofish.com,wx.17u.cn,web.meituan.com,npay.meituan.com,a1d5b283e-wx621112590b635086.sh.wxgateway.com,heic.alicdn.com,guide-acs.m.taobao.com,poplayer.template.alibaba.com,m5.amap.com,m5-zb.amap.com,oss.amap.com,sns.amap.com
 
