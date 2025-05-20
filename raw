@@ -190,7 +190,7 @@
 #拦截广告下发
 ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch %E9%97%B2%E9%B1%BC* url-and-header reject
 #首页顶部标签
-^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.home\.whale\.modulet\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
+#^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.home\.whale\.modulet\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
 #搜索栏填充词
 ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.shade\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
 #首页闲鱼币入口、底部发布球
@@ -213,7 +213,7 @@
 #商品详情页周边推荐
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.nearby\.itemdetail\.enter\/1\.0 url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
 #0关注情况下首页顶部关注频道的用户推荐
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.fun\.follow\.feed\.list\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
+#^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.fun\.follow\.feed\.list\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
 #^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.fun\.follow\.recommend\.feed\.list\/1\.0 url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
 #搜索结果信息流广告
 ^https:\/\/g-acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
@@ -237,7 +237,7 @@
 #用闲鱼币买更便宜
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.idle\.coin\.nextfresh\/1\.0 url reject-dict
 #消息页闲鱼精选
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemessage\.session\.sync\/3\.0 url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
+#^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemessage\.session\.sync\/3\.0 url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
 #携程
 ^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/[0-9]{5}\/json\/getTimeZoneServerIpList\?__gw_os=IOS url reject-200
 #开屏去广告
