@@ -188,59 +188,61 @@
 #迅雷
 ^https:\/\/api-shoulei-ssl\.xunlei\.com\/flowhub\/v1\/slots:batchGet$ url reject-dict
 ^https:\/\/conf-m-ssl\.xunlei\.com\/external\/  url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xunlei.js
-#闲鱼
-#拦截广告下发
+#！闲鱼
+# 拦截广告下发
 ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch %E9%97%B2%E9%B1%BC* url-and-header reject
-#首页顶部标签
+# 首页顶部标签
 #^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.home\.whale\.modulet\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-#搜索栏填充词
+# 搜索栏填充词
 ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.shade\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-#首页闲鱼币入口、底部发布球
+# 首页闲鱼币入口、底部发布球
 ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.list\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-#商品信息流广告
+# 商品信息流广告
 ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-#定位地区页面的信息流广告
+# 定位地区页面的信息流广告
 ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.home\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-#个人主页
+# 个人主页
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-#消息页感兴趣推荐
+# 消息页感兴趣推荐
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.playboy\.recommend\/1\.0 url reject
-#主页关注的人感兴趣推荐
+# 主页关注的人感兴趣推荐
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.playboy\.recommend\/2\.0 url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-#首页顶部频道菜单
+# 首页顶部频道菜单
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/1\.0 url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
 #^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/1\.0 url reject
-#商品详情页底部推荐
+# 商品详情页底部推荐
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.recommend\.list\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-#商品详情页周边推荐
+# 商品详情页周边推荐
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.nearby\.itemdetail\.enter\/1\.0 url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-#0关注情况下首页顶部关注频道的用户推荐
+# 0关注情况下首页顶部关注频道的用户推荐
 #^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.fun\.follow\.feed\.list\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
 #^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.fun\.follow\.recommend\.feed\.list\/1\.0 url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-#搜索结果信息流广告
+# 搜索结果信息流广告
 ^https:\/\/g-acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-#关注的人页面圈子横幅
+# 关注的人页面圈子横幅
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.group\.myself\.banner\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-#首页关注频道常访问的圈子
+# 首页关注频道常访问的圈子
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.fun\.follow\.often\.visit url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-#主页关注页面圈子新横幅
+# 主页关注页面圈子新横幅
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.circle\.myself\.banner\/1\.0 url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-#主页关注页面圈子常访问
+# 主页关注页面圈子常访问
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.circle\.visited\/1\.0 url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-#闲鱼我的页面底部商品推荐
+# 闲鱼我的页面底部商品推荐
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.buy\.feeds url reject-dict
-#开屏广告
+# 开屏广告
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlecommerce\.splash\.ads url reject-dict
-#搜索页多余推荐列表
+# 同城页横幅广告
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.flow\.plat\.section url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
+# 搜索页多余推荐列表
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.item\.search\.activate\/2\.0 url reject-dict
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.discover\/1\.0 url reject-dict
-#这些宝贝超好卖
+# 这些宝贝超好卖
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.resell\.recommendorhotcate\/1\.0 url reject-dict
-#用闲鱼币买更便宜
+# 用闲鱼币买更便宜
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.idle\.coin\.nextfresh\/1\.0 url reject-dict
-#消息页闲鱼精选
+# 消息页闲鱼精选
 #^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemessage\.session\.sync\/3\.0 url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-#携程
+#！携程
 ^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/[0-9]{5}\/json\/getTimeZoneServerIpList\?__gw_os=IOS url reject-200
 #开屏去广告
 ^https?:\/\/ma-adx\.ctrip\.com\/_ma\.gif url reject
