@@ -1,14 +1,14 @@
 #!name = MyBlockAds
 #!desc = 移除应用广告。
 #百度网盘去广告
-^https:\/\/pan\.baidu\.com\/api\/getconfig reject-dict
-^https:\/\/pan\.baidu\.com\/api\/getsyscfg reject-dict
-^https:\/\/pan\.baidu\.com\/api\/taskscore\/tasklist reject-dict
-^https:\/\/pan\.baidu\.com\/act\/api\/activityentry reject-dict
-^https:\/\/pan\.baidu\.com\/act\/api\/activityentry reject-dict
-^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user\?method=gamecenter reject-dict
-^https:\/\/pan\.baidu\.com\/act\/v2\/welfare\/list reject-dict
-^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adv reject-dict
+^https:\/\/pan\.baidu\.com\/api\/getconfig url reject-dict
+^https:\/\/pan\.baidu\.com\/api\/getsyscfg url reject-dict
+^https:\/\/pan\.baidu\.com\/api\/taskscore\/tasklist url reject-dict
+^https:\/\/pan\.baidu\.com\/act\/api\/activityentry url reject-dict
+^https:\/\/pan\.baidu\.com\/act\/api\/activityentry url reject-dict
+^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user\?method=gamecenter url reject-dict
+^https:\/\/pan\.baidu\.com\/act\/v2\/welfare\/list url reject-dict
+^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adv url reject-dict
 #！百度
 ^https?:\/\/fcvbjbcebos\.baidu\.com\/.+.mp4 url reject
 ^https?:\/\/fcvbjbcebos\.baidu\.com\/.+?\.mp4 url reject-img
