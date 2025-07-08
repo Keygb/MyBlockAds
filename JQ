@@ -248,15 +248,14 @@ URL-REGEX, ^https?:\/\/log\.stat\.kugou\.com\/mobile\/ad\.html, REJECT
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.idle\.coin\.nextfresh\/1\.0 url reject-dict
 # 消息页闲鱼精选
 #^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemessage\.session\.sync\/3\.0 url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
-
 #一汽大众//oneapp-api.faw-vw.com
-^https?:\/\/oneapp-api\.faw-vw\.com\/search\/firstPage\/getPromptList\/v1\?.* url script-response-body https://xiangwanguan.github.io/Shadowrocket/Rewrite/JavaScript/FAWVW.js
-^https?:\/\/oneapp-api\.faw-vw\.com\/benefits\/benefitsCard\/getInfo\/v1\?.* url script-response-body https://xiangwanguan.github.io/Shadowrocket/Rewrite/JavaScript/FAWVW.js 
-^https?:\/\/oneapp-api\.faw-vw\.com\/content\/(recommend\/getRecommendInfoFlows|customize\/getCustomizePageName)\/v1\?.* url script-response-body https://xiangwanguan.github.io/Shadowrocket/Rewrite/JavaScript/FAWVW.js
-^https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_HOME_BUOY url script-response-body https://xiangwanguan.github.io/Shadowrocket/Rewrite/JavaScript/FAWVW.js 
-^https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_(ICE|MEB)_OPEN_SCREEN_ADS url script-response-body https://xiangwanguan.github.io/Shadowrocket/Rewrite/JavaScript/FAWVW.js 
-^https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_(ICE|MEB)_HOME_(OWNER_BANNER|PROSPECTS_BANNER) url script-response-body https://xiangwanguan.github.io/Shadowrocket/Rewrite/JavaScript/FAWVW.js 
-^https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_(ICE|MEB)_HOME_(KONGO|CUSTOM_BANNER|CUSTOM_KONGO|CAR_ZHIHU_COLLEGE) url script-response-body https://xiangwanguan.github.io/Shadowrocket/Rewrite/JavaScript/FAWVW.js
+^https?:\/\/oneapp-api\.faw-vw\.com\/search\/firstPage\/getPromptList\/v1\?.* response-body-json-jq '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
+^https?:\/\/oneapp-api\.faw-vw\.com\/benefits\/benefitsCard\/getInfo\/v1\?.* response-body-json-jq '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
+^https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_HOME_BUOY response-body-json-jq '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
+^https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_(ICE|MEB)_(OPEN_SCREEN_ADS|CAR_ZHIHU_COLLEGE) response-body-json-jq '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
+^https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_(ICE|MEB)_HOME_(OWNER_BANNER|PROSPECTS_BANNER|CUSTOM_BANNER|KONGO|CUSTOM_KONGO) response-body-json-jq '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
+^https?:\/\/oneapp-api\.faw-vw\.com\/content\/(customize\/getCustomizePageName|recommend\/getRecommendInfoFlows|activity\/getSquareActivityList|theme\/getThemeList|post\/getPostsByTags|evaluate\/getEvaluateCards)\/v1\?.* response-body-json-jq '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
+^https?:\/\/oneapp-api\.faw-vw\.com\/content\/(collection\/getCollectionList)\/v1\?.* response-body-json-jq '. = { returnStatus: "SUCCEED", hasMore: false, data: {} }'
 
 #一刻相册//an.baidu.com, mbd.baidu.com
 ^https?:\/\/mbd\.baidu\.com\/ccs\/v1\/start\/confsync\? response-body-json-jq 'delpaths([["data","service","config","advertisement"]])'
