@@ -79,6 +79,7 @@ DOMAIN, access.if.iqiyi.com, REJECT
 
 #大麦// acs.m.taobao.com
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.welcome url reject-200
+
 #快手//az4-api.ksapisrv.com, az4-api-idc.ksapisrv.com, az2-api.ksapisrv.com, az2-api-idc.ksapisrv.com, apissl.gifshow.com, apissl.ksapisrv.com, az2-api-js.gifshow.com, az2-live.ksapisrv.com
 ^https?:\/\/(apissl|az2-api(-js|-idc)?)\.(gifshow|ksapisrv)\.com\/rest\/system\/startup\? response-body-json-jq 'delpaths([["reskinConfig"]])'
 ^https?:\/\/(apissl|az2-api(-js|-idc)?)\.(gifshow|ksapisrv)\.com\/rest\/system\/startup\? response-body-json-jq 'delpaths([["sidebarExSquareStyle","moreList"]])'
@@ -91,6 +92,7 @@ DOMAIN, access.if.iqiyi.com, REJECT
 ^https?:\/\/az2-api\.ksapisrv\.com\/rest\/n\/taskCenter\/task\/report\? url reject-dict
 # 广告下发
 ^https?:\/\/az2-api\.ksapisrv\.com\/rest\/n\/ad\/ url reject-dict
+
 #酷狗音乐//gateway.kugou.com, fx.service.kugou.com, hwstore.kugou.com, ep.kugou.com, gatewayretry.kugou.com, gzacshow.kugou.com, m1fxgroup.kugou.com
 ^https?:\/\/gateway(retry)?\.kugou\.com\/ocean\/v\d\/tab\/list_v\d response-body-json-jq 'def namesToRemove:["AI帮唱","长相思2","K歌","小说","游戏"];def removeParentIfNameMatches:if type=="object"then with_entries(select(.value|(type=="object"and .name as $name|$name|IN(namesToRemove[])|not)))|map_values(removeParentIfNameMatches)else .end;removeParentIfNameMatches'
 # 广告配置
@@ -130,6 +132,7 @@ DOMAIN, ad.tencentmusic.com, REJECT
 DOMAIN, adservice.kugou.com, REJECT
 DOMAIN, splashimgretrybssdl.cloud.kugou.com, REJECT
 URL-REGEX, ^https?:\/\/log\.stat\.kugou\.com\/mobile\/ad\.html, REJECT
+
 #美团//apimobile.meituan.com, img.meituan.net, p*.meituan.net, s3plus.meituan.net, flowplus.meituan.net, portal-portm.meituan.com, sqt.meituan.com
 ^https?:\/\/apimobile\.meituan\.com\/appupdate url reject
 ^https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/.+\.(gif|jpg)\.webp$ url reject-img
@@ -148,17 +151,20 @@ URL-REGEX, ^https?:\/\/log\.stat\.kugou\.com\/mobile\/ad\.html, REJECT
 ^https?:\/\/s3plus\.meituan\.net\/v\d\/mss_\w+\/brandcpt url reject
 ^https?:\/\/portal-portm\.meituan\.com\/horn_ios url reject-dict
 ^https?:\/\/sqt\.meituan\.com\/s\/gateway\/mweb\/api\/marketingResource\/show url reject
+
 #美团外卖// wmapi.meituan.com, p*.meituan.net, s3plus.meituan.net
 ^https?:\/\/wmapi\.meituan\.com\/api\/v\d+\/(loadInfo|openscreen|startpicture) url reject
 ^https?:\/\/p\d\.meituan\.net\/cell url reject
 ^https?:\/\/s3plus\.meituan\.net\/v\d\/mss_\w+\/goku\/(lottie|lucency) url reject-img
+
 #农业银行//midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com, firefly.abchina.com.cn
 ^https?:\/\/midc\.cdn-static\.abchina\.com\.cn\/distributecenterimg\/file\/download\/(?!bbc2|f015|1655|0992|4678|a194|d8e2|c513|e51c|0ee1|166e|05ca|c882|d5b8|22ed|a0dc|a55a|6f89|3bf9|3c71|52ec|5b62|ve7a|001c|923d|accf|4a10|0bd7|be7a|5b62|5dd6|1f24|006c|775d|bd02|b983|5251|806b|d119|db14|43c9|41d3|8570|2c10|85ea|1435|814e|f422|aec7|738c|d7c8|0538|02b4|fd20|7647|f6ef|07c5|885b|e4cb|685b|30aa|c23b|9603|f27f|eaf8|8011|a5eb|409d|724c|3f2a|e07f|6744|60a6|158c|8ce3) url reject-dict
 ^https?:\/\/enjoy\.cdn-static\.abchina\.com\/yx-engine-web\/file\/download\/(?!7dc2|fe96|cea3|06a8|1b11|d57b|6918|61db|2d58|aa23|) url reject-200
 ^https?:\/\/firefly\.abchina\.com\.cn\/firefly-collection\/Collect url reject-200
 ^https:\/\/mobilepaas\.abchina\.com\.cn:441\/mgw\.htm$ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/AgriculturalBank.js
+
 #同程旅行//*.ly.com, *.17usoft.com, *.17u.cn, mobilehotelapi.elong.com, quic-tcmapi.elong.com
-# 开屏广告
+#开屏广告
 ^https?:\/\/wx\.17u\.cn\/xcxhomeapi\/((aggregator\/index)|(home\/(screen|banner|converge)))$ url reject
 ^https?:\/\/wx\.17u\.cn\/crapi\/query\/getAdImgUrlByCode url reject-dict
 ^https?:\/\/tcmobileapi\.17usoft\.com\/appindexnew\/index\/openscreen url reject-dict
@@ -187,7 +193,8 @@ URL-REGEX, ^https?:\/\/log\.stat\.kugou\.com\/mobile\/ad\.html, REJECT
 
 ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Taobao.js
 ^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Taobao.js
- #WiFi万能钥匙//cds.wifi188.com
+
+#WiFi万能钥匙//cds.wifi188.com
 # 首页弹窗广告
 ^https?:\/\/cds\.wifi188\.com\/feeds\.sec url reject-dict
  #迅雷//api-shoulei-ssl.xunlei.com, conf-m-ssl.xunlei.com
@@ -248,6 +255,7 @@ URL-REGEX, ^https?:\/\/log\.stat\.kugou\.com\/mobile\/ad\.html, REJECT
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.idle\.coin\.nextfresh\/1\.0 url reject-dict
 # 消息页闲鱼精选
 #^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemessage\.session\.sync\/3\.0 url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xianyu.js
+
 #一汽大众//oneapp-api.faw-vw.com
 ^https?:\/\/oneapp-api\.faw-vw\.com\/search\/firstPage\/getPromptList\/v1\?.* response-body-json-jq '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
 ^https?:\/\/oneapp-api\.faw-vw\.com\/benefits\/benefitsCard\/getInfo\/v1\?.* response-body-json-jq '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
