@@ -190,8 +190,6 @@
 ^https:\/\/wx\.17u\.cn\/wechatmypubapi\/myInfo\/memberInfo url reject-dict
 ^https:\/\/wx\.17u\.cn\/wireless\/monitor\/wx\/common\/compressevent url reject-dict
 ^https:\/\/a1d5b283e-wx621112590b635086\.sh\.wxgateway\.com\/xcxhomeapi\/home\/screen url reject-dict
-#WPS国际版去开屏内部横幅
-^https:\/\/firebaseremoteconfig\.googleapis\.com\/v1\/projects\/wps-ios-351108\/namespaces\/firebase:fetch\?key=.*? url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/WPS.js
 #美团
 ^https:\/\/web\.meituan\.com\/api\/miniprogram\/tabbar\/all\/query url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/refs/heads/main/MeiTuanNoAd.js
 ^https:\/\/web\.meituan\.com\/api\/miniprogram\/index\/aggregate url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/refs/heads/main/MeiTuanNoAd.js
