@@ -270,9 +270,9 @@ user-agent, %E9%97%B2%E9%B1%BC*, reject
 ^https?:\/\/mbd\.baidu\.com\/ccs\/v1\/start\/confsync\? url jsonjq-response-body 'delpaths([["data","service","config","advertisement"]])'
 ^https?:\/\/mbd\.baidu\.com\/ccs\/v1\/start\/confsync\? url jsonjq-response-body 'delpaths([["data","service","config","youa","pm_config_ad"]])'
 # 一刻核心经常变更的配置
-^https:\/\/pan\.baidu\.com\/act\/api\/conf\?.*conf_key=youa_core_config_ios reject-dict
+^https:\/\/pan\.baidu\.com\/act\/api\/conf\?.*conf_key=youa_core_config_ios url reject-dict
 # 弹窗推广
-^https:\/\/pan\.baidu\.com\/youai\/material\/v1\/getbynavid\?.*nav_id=1 reject-dict
+^https:\/\/pan\.baidu\.com\/youai\/material\/v1\/getbynavid\?.*nav_id=1 url reject-dict
 
 # 招商银行//webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com
 # 开屏广告
