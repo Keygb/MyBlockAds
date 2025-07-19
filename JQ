@@ -132,7 +132,6 @@ DOMAIN, adserviceretry.kglink.cn, REJECT
 DOMAIN, ad.tencentmusic.com, REJECT
 DOMAIN, adservice.kugou.com, REJECT
 DOMAIN, splashimgretrybssdl.cloud.kugou.com, REJECT
-URL-REGEX, ^https?:\/\/log\.stat\.kugou\.com\/mobile\/ad\.html, REJECT
 
 #美团//apimobile.meituan.com, img.meituan.net, p*.meituan.net, s3plus.meituan.net, flowplus.meituan.net, portal-portm.meituan.com, sqt.meituan.com
 ^https?:\/\/apimobile\.meituan\.com\/appupdate url reject
