@@ -204,6 +204,8 @@
 ^https:\/\/api-shoulei-ssl\.xunlei\.com\/flowhub\/v1\/slots:batchGet$ url reject-dict
 ^https:\/\/conf-m-ssl\.xunlei\.com\/external\/ url script-response-body https://raw.githubusercontent.com/Keygb/QuantumX/refs/heads/main/Xunlei.js
 #！闲鱼hostname = acs.m.goofish.com, g-acs.m.goofish.com
+# 分流添加广告下发
+user-agent, %E9%97%B2%E9%B1%BC*, reject
 # 拦截广告下发
 ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch %E9%97%B2%E9%B1%BC* url-and-header reject
 # 首页顶部标签
