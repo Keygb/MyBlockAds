@@ -95,7 +95,7 @@ DOMAIN, access.if.iqiyi.com, REJECT
 ^https?:\/\/az2-api\.ksapisrv\.com\/rest\/n\/ad\/ url reject-dict
 
 #酷狗音乐//gateway.kugou.com, fx.service.kugou.com, hwstore.kugou.com, ep.kugou.com, gatewayretry.kugou.com, gzacshow.kugou.com, m1fxgroup.kugou.com
-^https?:\/\/gateway(retry)?\.kugou\.com\/ocean\/v\d\/tab\/list_v\d url jsonjq-response-body 'def namesToRemove:["AI帮唱","长相思2","K歌","小说","游戏"];def removeParentIfNameMatches:if type=="object"then with_entries(select(.value|(type=="object"and .name as $name|$name|IN(namesToRemove[])|not)))|map_values(removeParentIfNameMatches)else .end;removeParentIfNameMatches'
+^https?:\/\/gateway(retry)?\.kugou\.com\/ocean\/v\d\/tab\/list_v\d url jsonjq-response-body 'walk(if type == "object" and has("name") and (.name | IN(["AI帮唱","长相思2","K歌","小说","游戏"])) then empty else . end)'
 # 广告配置
 ^https?:\/\/fx\.service\.kugou\.com\/mfx-kugoulive\/ad\/ url reject-dict
 ^https?:\/\/gateway(retry)?\.kugou\.com\/adp\/ad\/ url reject-dict
