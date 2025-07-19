@@ -301,24 +301,15 @@ user-agent, %E9%97%B2%E9%B1%BC*, reject
 ^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3$ url jsonjq-response-body 'delpaths([["respData","bmNewInfo"]])'
 ^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3$ url jsonjq-response-body 'del(.respData.itemGroupList[].itemList[] | select(.name == "天天赚钱" or .name == "借钱")) | del(.respData.itemGroupList[] | select(.groupType == 15))'
 # 开屏广告
-^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzlogic\/getOpenScreen$ url reject-dict
-# 首页 - 信息流 - 猜你想搜
-^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getwindvanecardv2$ url reject-dict
-# 首页 - 弹窗
+^https?:\/\/app\.zhuanzhuan\.com\/zzx\/transfer\/getConfigInfo url reject-dict
 ^https?:\/\/app\.zhuanzhuan\.com\/zzopen\/popwindow\/getallpopwin\? url reject-dict
-# 首页 - 回收 - 弹窗
-^https?:\/\/app\.zhuanzhuan\.com\/zzopen\/zzbmlogic\/queryFrontPageWindowInfo\? url reject-dict
-# 收藏 - 订阅 - 热门精选
-^https?:\/\/app\.zhuanzhuan\.com\/zzopen\/ptuserlogic\/subscribehotrecommend$ url reject-dict
-# 商品页面 - 评价 - 好货推荐
-^https?:\/\/app\.zhuanzhuan\.com\/zzopen\/ypmall\/listData$ url reject-dict
-# 我的页面 - 发布闲置赚钱
-^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzusercenter\/myprofilevariouscards$ url reject-dict
-# 收藏 - 收藏 - 精选推荐
-^https?:\/\/app\.zhuanzhuan\.com\/zzopen\/ptsimpleshow\/recommendbymyloveinfo\? mock-response-body data-type=text status-code=200 data="{"respCode":0,"errorMsg":"null","errMsg":""}"
-# 收藏 - 足迹 - 精选推荐
-^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/footprintsamerecommend\? mock-response-body data-type=text status-code=200 data="{"respCode":0,"errorMsg":"","errMsg":""}"
-# 我的页面 - 精选好货
+^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzlogic\/getOpenScreen url reject-dict
+# 转转右下角悬浮广告
+^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/userred\?scene=homePage url reject-dict
+^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getfeedflowinfo\? url response-body userRed response-body fmz200
+# “我的”页面去除冗余的模块
+^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhuanzhuan/zhuanzhuan.js
+^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos url response-body infoData response-body fmz200
 
 hostname= -i.vip.iqiyi.com, *.iqiyi.com,list-app-m.i4.cn,app-m.i4.cn, pan.baidu.com, tiebac.baidu.com, tieba.baidu.com, www.baidu.com, fcvbjbcebos.baidu.com, cover.baidu.com, baichuan.baidu.com, api*.tuisong.baidu.com, mobads.baidu.com, issuecdn.baidupcs.com, sa*.tuisong.baidu.com, m.baidu.com, sofire.baidu.com, acs.m.taobao.com, az4-api.ksapisrv.com, az4-api-idc.ksapisrv.com, az2-api.ksapisrv.com, az2-api-idc.ksapisrv.com, apissl.gifshow.com, apissl.ksapisrv.com, az2-api-js.gifshow.com, az2-live.ksapisrv.com, , gateway.kugou.com, fx.service.kugou.com, hwstore.kugou.com, ep.kugou.com, gatewayretry.kugou.com, gzacshow.kugou.com, m1fxgroup.kugou.com, apimobile.meituan.com, img.meituan.net, p*.meituan.net, s3plus.meituan.net, flowplus.meituan.net, portal-portm.meituan.com, sqt.meituan.com, wmapi.meituan.com, p*.meituan.net, s3plus.meituan.net, midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com, firefly.abchina.com.cn, midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com, firefly.abchina.com.cn, *.ly.com, *.17usoft.com, *.17u.cn, mobilehotelapi.elong.com, quic-tcmapi.elong.com, acs.m.taobao.com,heic.alicdn.com,guide-acs.m.taobao.com, poplayer.template.alibaba.com, cds.wifi188.com, acs.m.goofish.com, g-acs.m.goofish.com, oneapp-api.faw-vw.com, an.baidu.com, mbd.baidu.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, mars.ccc.cmbchina.com, marscc.bcs.cmbchina.com, intellicc.b*s.cmbchina.com, *mbasecc.b*s.cmbchina.com,app.zhuanzhuan.com
 
